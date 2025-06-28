@@ -19,13 +19,17 @@ class Restaurant:
         self.number_served += increment
         
 
-restaurant = Restaurant("Tegem", "Shiro Wot")
-print(restaurant.restaurant_name)
-print(restaurant.cuisine_type)
-print(restaurant.number_served)
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
-restaurant.set_number_served(8)
-print(restaurant.number_served)
-restaurant.increment_number_served(1)
-print(restaurant.number_served)
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type, flavors):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = flavors
+
+    def display_flavor(self):
+        for flavor in self.flavors:
+            print(flavor)
+
+
+ice_cream_stand = IceCreamStand("Cool Cones", "Dessert", ["Vanilla", "Chocolate", "Strawberry"])
+ice_cream_stand.describe_restaurant()
+ice_cream_stand.open_restaurant()
+ice_cream_stand.display_flavor()
