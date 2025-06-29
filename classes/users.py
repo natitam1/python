@@ -22,23 +22,15 @@ class User:
     def reset_login_attempts(self):
         self.login_attempts = 0
 
-user1 = User("Natnael", "Tamiru", 16, "M", "natnael@gmail.com", "Addis Ababa" ,1)
-user2 = User("Abebe", "Chala", 22, "M", "abe23@gmail.com", "Hawassa", 2)
+class Privileges:
+    def __init__(self, privileges):
+        self.privileges = privileges
+    def show_privileges(self):
+        for privilege in self.privileges:
+            print(privilege)
 
-print(user2.first_name)
-user2.greet_user()
-print(user2.login_attempts)
-user2.increment_login_attempts()
-print(user2.login_attempts)
-user2.increment_login_attempts()
-print(user2.login_attempts)
-user2.increment_login_attempts()
-print(user2.login_attempts)
-user2.increment_login_attempts()
-print(user2.login_attempts)
-user2.increment_login_attempts()
-print(user2.login_attempts)
-user2.increment_login_attempts()
-print(user2.login_attempts)
-user2.reset_login_attempts()
-print(user2.login_attempts)
+class Admin(User):
+    def __init__(self, first_name, last_name, age, sex, email, city, login_attempts, privileges):
+        super().__init__(first_name, last_name, age, sex, email, city, login_attempts)
+        self.privileges = Privileges(privileges)
+

@@ -28,8 +28,10 @@ class IceCreamStand(Restaurant):
         for flavor in self.flavors:
             print(flavor)
 
+instance_1 = IceCreamStand("Tegerm", "Shiro", "Sour")
+instance_2 = IceCreamStand("Tegerm", "Doro", "Bitter")
+instance_3 = IceCreamStand("Tegerm", "Pasta", "Tang")
 
-ice_cream_stand = IceCreamStand("Cool Cones", "Dessert", ["Vanilla", "Chocolate", "Strawberry"])
-ice_cream_stand.describe_restaurant()
-ice_cream_stand.open_restaurant()
-ice_cream_stand.display_flavor()
+instance_1.describe_restaurant()
+instance_2.describe_restaurant()
+instance_3.describe_restaurant()
