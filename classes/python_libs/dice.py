@@ -1,3 +1,4 @@
+"""This is simple dice project that takes sides from the user and prints the random number"""
 from random import randint
 
 class Dice:
