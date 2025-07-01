@@ -1,0 +1,4 @@
+In Python you can build AI models 
+In Python you can visualize data
+In Python you can make the back end of your website faster and scalable
+In Python you can create files
