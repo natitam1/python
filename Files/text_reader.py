@@ -1,10 +1,17 @@
 from pathlib import Path
 
-try:
-    path1 = Path('dogs.txt')
-    path2 = Path('dogs.txt')
-    content = path1.read_text()
-    content1 = path2.read_text()
-    print(content)
-except FileNotFoundError:
-    print("The file you are looking for is not found.")
+def read_file(path: Path):
+    """Try to open and read the file, or handle if it's missing."""
+    try:
+        contents = path.read_text()
+        print(f"\nContents of {path.name}:\n{contents}")
+    except FileNotFoundError:
+        pass
+
+# Define file paths using pathlib
+cats_path = Path("cats.txt")
+dogs_path = Path("dogs.txt")
+
+# Loop through each file
+for file_path in [cats_path, dogs_path]:
+    read_file(file_path)
