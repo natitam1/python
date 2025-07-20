@@ -10,3 +10,6 @@ print(f"Status code: {r.status_code}")
 
 # Convert the response object to a directory.
 response_dict = r.json()
+
+# Process results.
+print(response_dict.key())
