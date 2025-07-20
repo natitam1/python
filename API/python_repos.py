@@ -7,3 +7,6 @@ url += "?q=language:python+sort:stars+stars:>10000"
 headers = {"Accept": "application/vnd.github.v3+json"}
 r = requests.get(url, headers=headers)
 print(f"Status code: {r.status_code}")
+
+# Convert the response object to a directory.
+response_dict = r.json()
