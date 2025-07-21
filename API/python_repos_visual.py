@@ -17,7 +17,7 @@ print(f"Complete results: {not response_dict['incomplete_results']}")
 repo_dicts = response_dict['items']
 repo_names, stars = [], []
 for repo_dict in repo_dicts:
-    repo_dicts.append(repo_dict['name'])
+    repo_names.append(repo_dict['name'])
     stars.append(repo_dict['stargazers_count'])
 
 # Make visualization.
