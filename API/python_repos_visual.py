@@ -22,4 +22,4 @@ for repo_dict in repo_dicts:
 
 # Make visualization.
 fig = px.bar(x=repo_names, y=stars)
-fig.show()
+fig.write_html("repos_battle.html")
