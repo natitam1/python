@@ -13,3 +13,7 @@ response_dict = r.json()
 
 print(f"Total repositories: {response_dict['total_count']}")
 print(f"Complete results: {not response_dict['incomplete_results']}")
+
+# Explore information about the repositories.
+repo_dicts = response_dict['items']
+print(f"Repositories returned: {len(repo_dicts)}")
