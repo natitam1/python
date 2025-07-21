@@ -11,5 +11,5 @@ print(f"Status code: {r.status_code}")
 # Convert the response object to a directory.
 response_dict = r.json()
 
-# Process results.
-print(response_dict.keys())
+print(f"Total repositories: {response_dict['total_count']}")
+print(f"Complete results: {not response_dict['incomplete_results']}")
