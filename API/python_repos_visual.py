@@ -27,5 +27,7 @@ for repo_dict in repo_dicts:
     hover_texts.append(hover_text)
 
 # Make visualization.
-fig = px.bar(x=repo_names, y=stars)
+title = "Most-Starred Python Projects on GitHub"
+labels = {"x": "Repository", "y":"Stars"}
+fig = px.bar(x=repo_names, y=stars, title=title, labels=labels, hover_name=hover_texts)
 fig.write_html("repos_battle.html")
